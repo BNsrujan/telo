@@ -18,6 +18,7 @@ type Payment = {
       status: "processing",
       email: "example@gmail.com",
     },
-    // ...
   ]
+
+  // mba finance 
   

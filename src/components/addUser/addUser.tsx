@@ -11,13 +11,26 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import axios from "axios"
 import { User } from "lucide-react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 
 export default function AddUser() {
-    const [name,setName] = useState("");
+  const [name,setName] = useState("");
+
+  useEffect(()=>{
+    try{
+      const responce  = axios.get("api/user fatching")
+      
+    }catch(error) {
+
+    }
+    
+  },[name])
+
+
   return (
     <Dialog >
       <DialogTrigger asChild>
@@ -34,7 +47,7 @@ export default function AddUser() {
             <Label htmlFor="name" className="text-right">
               Name
             </Label>
-            <Input id="name" type="text" value={name} placeholder="ex:300" className="col-span-3" />
+            <Input id="name" type="number" value={name} placeholder="ex:300" className="col-span-3" />
           </div>
         
         </div>
